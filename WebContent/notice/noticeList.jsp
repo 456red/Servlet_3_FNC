@@ -140,6 +140,7 @@
 	<!-- end -->
 	<!-- search 제목, 작성자, 내용 -->
 	<form action="./noticeList.jsp">
+		<input type="hidden" name="curPage">
 		<select name="kind">
 			<option value="title">Title</option>
 			<option value="writer">Writer</option>
