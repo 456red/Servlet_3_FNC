@@ -43,6 +43,7 @@
 <body>
 	<%@ include file="../temp/header.jsp" %>
 	<section id="main">
+
 		<h1>Member Join Form Add GitHUb add Local</h1>
 		<form name="frm" class="form-horizontal" action="memberJoinProcess.jsp" method="post">
 			<div class="form-group">
