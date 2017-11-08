@@ -43,6 +43,7 @@
 		
 		var check = document.getElementById("check");
 			check.addEventListener("click", function(){
+			var idCheck = document.frm.idCheck.value;	
 			var ch = document.getElementsByClassName("ch");
 			for(var i=0;i<ch.length;i++){
 				if(ch[i].value==""){
@@ -53,12 +54,17 @@
 				result2=false;
 			}
 			
-			if(result && result2){
+			if(result && result2 && idCheck=="1"){
 				document.frm.submit();
 			}else {
 				alert("모두 입력 하세요");
 			}
 			
+		});
+			
+		var id = document.getElementById("id");
+		id.addEventListener("change", function(){
+			document.frm.idCheck.value="0";
 		});
 	}
 </script>
@@ -69,6 +75,7 @@
 
 		<h1>Member Join Form Add GitHUb add Local</h1>
 		<form name="frm" class="form-horizontal" action="memberJoinProcess.jsp" method="post">
+			<input type="hidden" name="idCheck" value="0">
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="id">ID:</label>
 				<div class="col-sm-10">
@@ -136,7 +143,7 @@
 			
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<input type="submit" id="check2" value="JOIN">
+					<input type="button" id="check" value="JOIN">
 				</div>
 			</div>
 		</form>
