@@ -55,12 +55,21 @@
 			}
 			
 			if(result && result2 && idCheck=="1"){
+<<<<<<< HEAD
 				alert("Join")
 				/* document.frm.submit(); */
+=======
+				document.frm.submit();
+>>>>>>> 1d1e1b2b644ab39b1ecfd1919faf775a4232121c
 			}else {
 				alert("모두 입력 하세요");
 			}
 			
+		});
+			
+		var id = document.getElementById("id");
+		id.addEventListener("change", function(){
+			document.frm.idCheck.value="0";
 		});
 	}
 </script>
