@@ -150,8 +150,10 @@
 		<input type="submit" value="SEARCH">
 	</form>
 	<!-- search -->		
-			
+			<%if(memberDTO !=null && memberDTO.getJob().equals("T")){ %>
 			<a class="btn btn-success" href="./noticeWriteForm.jsp">WRITE</a>
+			<%} %>
+			
 		</article>
 	</section>
 	<%@ include file="../temp/footer.jsp" %>
